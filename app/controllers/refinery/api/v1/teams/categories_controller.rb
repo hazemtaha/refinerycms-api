@@ -23,10 +23,10 @@ if defined?(Refinery::Teams)
               respond_with(@categories)
             end
 
-            # def show
-            #   @page = page
-            #   respond_with(@page)
-            # end
+            def show
+              @category = category
+              respond_with(@category)
+            end
             #
             # def new
             # end
@@ -57,14 +57,14 @@ if defined?(Refinery::Teams)
             #   respond_with(page, status: 204)
             # end
             #
-            # private
-            #
-            # def page
-            #   @page ||= Refinery::Page.
-            #               includes(:translations, :parts).
-            #               accessible_by(current_ability, :read).
-            #               find(params[:id])
-            # end
+            private
+
+            def category
+              @category ||= Refinery::Teams::Category.
+                          # includes(:translations, :parts).
+                          accessible_by(current_ability, :read).
+                          find(params[:id])
+            end
             #
             # def page_params
             #   if params[:page] && !params[:page].empty?
