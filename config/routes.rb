@@ -17,7 +17,9 @@ Refinery::Core::Engine.routes.draw do
         resources :inquiries, only: [:new, :create, :index, :show, :destroy]
       end
 
-      resources :teams, only: [:index]
+      namespace :teams do
+        resources :teams, only: [:index]
+      end
 
     end
 

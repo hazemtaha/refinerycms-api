@@ -59,7 +59,7 @@ module Refinery
       ]
 
       @@teams_team_attributes = [
-        :fullname, :job_title, :body, :id, :email
+        :id, :fullname, :job_title, :body, :email
       ]
     end
   end
