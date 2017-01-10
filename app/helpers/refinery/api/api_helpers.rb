@@ -8,7 +8,7 @@ module Refinery
         :resource_attributes,
         :blog_post_attributes,
         :inquiries_inquiry_attributes,
-        :image_page_attributes
+        :image_page_attributes,
         :teams_team_attributes
       ]
 
