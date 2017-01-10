@@ -17,10 +17,8 @@ Refinery::Core::Engine.routes.draw do
         resources :inquiries, only: [:new, :create, :index, :show, :destroy]
       end
 
-      namespace :teams do
-        resources :teams, only: [:index]
-      end
-      
+      resources :teams, only: [:index]
+
     end
 
     match 'v:api/*path', to: redirect("/api/v1/%{path}"), via: [:get, :post, :put, :patch, :delete]
