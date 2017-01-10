@@ -9,7 +9,8 @@ module Refinery
         :blog_post_attributes,
         :inquiries_inquiry_attributes,
         :image_page_attributes,
-        :teams_team_attributes
+        :teams_team_attributes,
+        :teams_category_attributes
       ]
 
       mattr_reader *ATTRIBUTES
@@ -61,6 +62,11 @@ module Refinery
       @@teams_team_attributes = [
         :id, :fullname, :job_title, :body, :email
       ]
+
+      @@teams_category_attributes = [
+        :id, :title
+      ]
+
     end
   end
 end

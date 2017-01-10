@@ -19,6 +19,7 @@ Refinery::Core::Engine.routes.draw do
 
       namespace :teams do
         resources :teams, only: [:index]
+        resources :categories, only: [:index]
       end
 
     end
